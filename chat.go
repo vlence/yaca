@@ -7,12 +7,16 @@ type User struct {
 }
 
 type Message struct {
+	chat *Chat
 	from *User
-	to *User
 	sentAt time.Time
-	text string
+	text []byte // should be limited to maybe 4k bytes, enough for 1000 characters
 }
 
 func (msg *Message) Text() string {
-	return msg.text
+	return string(msg.text)
+}
+
+type Chat struct {
+	msgs []*Message
 }

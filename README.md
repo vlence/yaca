@@ -15,3 +15,5 @@ Each chat is just a sqlite database with all the chat messages.
 ```
 UserA-UserB.chats = Msg1->Msg2
 ```
+
+Only the backend is implemented. The frontend (cli, web, etc.) needs to be implemented by the user. A web example is provided under `cmd/web`.
